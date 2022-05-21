@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "692992970180",
+    "project_id": "greenvalleygp2",
+    "storage_bucket": "greenvalleygp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692992970180:android:c624e5a1cab71d04402891",
+        "android_client_info": {
+          "package_name": "com.example.greenvalleygp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692992970180-s5q56hikat90rb01im28ksn0j6jepotv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.greenvalleygp2",
+            "certificate_hash": "a789e505c817a122ea906ea6eaa3d48b3a30ab18"
+          }
+        },
+        {
+          "client_id": "692992970180-qptje3c771vr4mmrhmftis7hliautic8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgIKB7ORQivvGpyDPAXZ_grQJ_kH7EZiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692992970180-qptje3c771vr4mmrhmftis7hliautic8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
