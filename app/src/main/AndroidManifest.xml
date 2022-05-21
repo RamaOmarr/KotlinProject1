@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenValleyGP2">
         <activity
-            android:name=".LoginPage"
+            android:name=".FarmOwnerSignup"
             android:exported="false" />
         <activity
-            android:name=".FarmOwnerSignup"
+            android:name=".LoginPage"
             android:exported="false" />
         <activity
             android:name=".EditProfileFarmOwner"

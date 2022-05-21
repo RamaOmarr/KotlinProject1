@@ -20,7 +20,7 @@ import com.google.firebase.ktx.Firebase
 class FarmOwnerSignup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_farm_owner_signup)
+        setContentView(R.layout.activity_farm_owner_signup2)
 
         val btn: Button= findViewById(R.id.SignupBtn)
         var fOwnerEmail: EditText= findViewById(R.id.EmailSign)
@@ -48,14 +48,14 @@ class FarmOwnerSignup : AppCompatActivity() {
 
                             val FarmFireStore = FirebaseFirestore.getInstance()
                             FarmFireStore.collection("FarmOwner")
-                                    .document(getCurrentUserID())
-                                    .set(FarmOwnerUser, SetOptions.merge())
-                                    .addOnSuccessListener {
+                                .document(getCurrentUserID())
+                                .set(FarmOwnerUser, SetOptions.merge())
+                                .addOnSuccessListener {
                                     Toast.makeText(this, "account created", Toast.LENGTH_SHORT).show()
 
                                 }.addOnFailureListener{
                                     Toast.makeText(this,"Failed", Toast.LENGTH_LONG).show()
-                                    }
+                                }
 
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
@@ -67,7 +67,7 @@ class FarmOwnerSignup : AppCompatActivity() {
                         }
                     })
         }
-        }
+    }
 }
 fun getCurrentUserID(): String {
     val currentUser = FirebaseAuth.getInstance().currentUser
