@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     android:alpha="0.55"
     android:background="#E7F1DC"
-    tools:context=".MainActivity" />
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addAfarmButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FAF7F7"
+        android:backgroundTint="#00E7F1DC"
+        android:text="+Add  a farm"
+        android:textAlignment="textStart"
+        android:textColor="#684A2A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="347dp"
+        android:layout_height="505dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#E7F1DC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/addAfarmButton"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="@+id/addAfarmButton"
+        app:layout_constraintTop_toBottomOf="@+id/addAfarmButton"
+        app:layout_constraintVertical_bias="0.341"
+        tools:listitem="@layout/list_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

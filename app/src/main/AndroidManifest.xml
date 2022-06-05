@@ -5,28 +5,45 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GreenValleyGP2">
+        android:theme="@style/Theme.Material3.Light">
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:parentActivityName='.LoginPage'>
+
+        </service>
+
         <activity
-            android:name=".FarmOwnerSignup"
-            android:exported="false" />
-        <activity
-            android:name=".LoginPage"
-            android:exported="false" />
-        <activity
-            android:name=".EditProfileFarmOwner"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".FirstPic"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddFarm"
+            android:exported="false" />
+        <activity
+            android:name=".FarmOwnerSignup"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".EditProfileFarmOwner"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

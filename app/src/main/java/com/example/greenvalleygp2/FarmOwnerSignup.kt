@@ -40,16 +40,14 @@ class FarmOwnerSignup : AppCompatActivity() {
                     {
                             task ->
                         if(task.isSuccessful){
-                            val firebaseUser = FirebaseFirestore.getInstance()
-                            //val db = Firebase.firestore
+                            //val firebaseUser = FirebaseFirestore.getInstance()
+                            val farmOwnerUser= FarmOwnerInfo(getCurrentUserID(), fOwnerFirstName.text.toString(),fOwnerLastName.text.toString(),fOwnerEmail.text.toString(),fOwnerPass.text.toString(),fOwnerPhone.text.toString())
+                            Toast.makeText(this, "You were registered successfully"+ farmOwnerUser.id, Toast.LENGTH_SHORT).show()
 
-                            val FarmOwnerUser= FarmOwnerInfo(getCurrentUserID(), fOwnerFirstName.text.toString(),fOwnerLastName.text.toString(),fOwnerEmail.text.toString(),fOwnerPass.text.toString(),fOwnerPhone.text.toString())
-                            Toast.makeText(this, "You were registered successfully"+ FarmOwnerUser.id, Toast.LENGTH_SHORT).show()
-
-                            val FarmFireStore = FirebaseFirestore.getInstance()
-                            FarmFireStore.collection("FarmOwner")
+                            val farmFireStore = FirebaseFirestore.getInstance()
+                            farmFireStore.collection("FarmOwner")
                                 .document(getCurrentUserID())
-                                .set(FarmOwnerUser, SetOptions.merge())
+                                .set(farmOwnerUser, SetOptions.merge())
                                 .addOnSuccessListener {
                                     Toast.makeText(this, "account created", Toast.LENGTH_SHORT).show()
 
